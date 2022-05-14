@@ -1,1 +1,26 @@
+@import url("https://one8ui.netlify.app/css/components.css");
 
+:root {
+  /* --white: white; */
+  --text-color: rgb(240, 232, 232);
+  --primary-light: #0b77e4;
+  --bg-color: rgb(10, 25, 41);
+  --card-bg-color: #223251;
+  --nav-border-clr: #eee;
+  --card-shadow: #adb5bd;
+  --light-green: rgb(18, 192, 18);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+.App {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+}
+.main-cont {
+  padding: 5rem 0;
+  justify-content: center;
+  align-items: center;
+}

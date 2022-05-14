@@ -1,0 +1,25 @@
+.navbar {
+  padding: 1rem 0 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 7rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  border-bottom: 0.2rem solid var(--nav-border-clr);
+}
+.nav-heading {
+  align-items: center;
+}
+.nav-logo {
+  height: 5rem;
+}
+.nav-heading-small {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.saved-item-container {
+  gap: 1.2rem;
+  align-items: center;
+}
