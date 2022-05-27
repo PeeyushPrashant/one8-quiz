@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom"
+import { useAuth } from "../../context"
 import "./NavBar.css"
 
 export const NavBar=()=>{
+  const {token,logoutHandler}=useAuth();
+  const navigate= useNavigate()
     return(
         <nav className="navbar flex-row">
         <a href="">
@@ -12,7 +16,12 @@ export const NavBar=()=>{
         </a>
 
         <div className="saved-item-container flex-row">
-           <button className="btn btn-primary btn-login">Login</button>
+          {token?<div className="saved-item flex-row"
+          onClick={logoutHandler}
+          ><i className="fas fa-sign-out-alt nav-icon"></i></div>:
+          <div className="saved-item flex-row"
+          onClick={()=>navigate("/login")}
+          ><i className="fas fa-user-circle nav-icon"></i></div>}
         </div>
       </nav>
     )

@@ -1,9 +1,11 @@
 import { NavBar } from "../../components"
 import { quizData } from "../Question/quiz-model"
 import { useNavigate } from "react-router-dom"
+import { useAuth } from "../../context"
 import "./LandingPage.css"
 
 export const LandingPage=()=>{
+  const {token}= useAuth();
   const navigate= useNavigate();
     return(
         <>
@@ -32,7 +34,7 @@ export const LandingPage=()=>{
               </section>
               <footer className="quiz-footer">
                 <h4 className="play-tag"
-                onClick={()=>navigate("/rules")}
+                onClick={token?()=>navigate("/rules"):()=>navigate("/login")}
                 >Play now</h4>
               </footer>
             </div>

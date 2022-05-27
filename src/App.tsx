@@ -1,6 +1,6 @@
 import React from 'react';
 import {Routes,Route } from 'react-router-dom';
-import { LandingPage,Rules } from './pages';
+import { LandingPage,Rules,Login,SignUp } from './pages';
 
 import './App.css';
 
@@ -10,6 +10,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/rules" element={<Rules/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
       </Routes>
     </div>
   );

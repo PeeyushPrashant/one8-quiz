@@ -18,8 +18,18 @@
   font-size: 2rem;
   color: var(--text-color);
 }
-
+.saved-item {
+  height: 3.5rem;
+  align-items: center;
+  position: relative;
+}
 .saved-item-container {
   gap: 1.2rem;
   align-items: center;
+}
+.nav-icon {
+  color: var(--text-color);
+  margin-right: 1.2rem;
+  font-size: 3rem;
+  cursor: pointer;
 }
