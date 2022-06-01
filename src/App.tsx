@@ -1,6 +1,6 @@
 import React from 'react';
 import {Routes,Route } from 'react-router-dom';
-import { LandingPage,Rules,Login,SignUp } from './pages';
+import { LandingPage,Rules,Login,SignUp,Question } from './pages';
 
 import './App.css';
 
@@ -9,7 +9,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
-        <Route path="/rules" element={<Rules/>}/>
+        <Route path="/:categoryId">
+            <Route path="rules" element={<Rules/>}/>
+            <Route path=":questionIndex" element={<Question/>}/>
+        </Route>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
       </Routes>

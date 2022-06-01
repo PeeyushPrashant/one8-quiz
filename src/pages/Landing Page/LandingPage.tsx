@@ -1,5 +1,5 @@
 import { NavBar } from "../../components"
-import { quizData } from "../Question/quiz-model"
+import { categoryData } from "../../Data/category-model"
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../../context"
 import "./LandingPage.css"
@@ -10,7 +10,7 @@ export const LandingPage=()=>{
     return(
         <>
         <NavBar/>
-        <main className="quiz-home-container flex-row">
+        <main className="quiz-home-container">
         <section className="left-section">
           <h1 className="left-subhead">Wanna test your knowledge about cricket?</h1>
           <h1 className="left-subhead">Let's have some fun!</h1>
@@ -21,8 +21,8 @@ export const LandingPage=()=>{
         </section>
         </main>
         <hr className="partition-line" />
-        <section className="flex-row quiz-card-container" id="explore">
-          {quizData.map((item)=>{
+        <section className="quiz-card-container" id="explore">
+          {categoryData.map((item)=>{
             return(
               <div className="quiz-card flex-col">
                <img src={item.image} 
@@ -32,9 +32,9 @@ export const LandingPage=()=>{
               <section className="paragraph-sm">
               Take this quiz to test yourself
               </section>
-              <footer className="quiz-footer">
+              <footer className="quiz-card-footer">
                 <h4 className="play-tag"
-                onClick={token?()=>navigate("/rules"):()=>navigate("/login")}
+                onClick={token?()=>navigate(`/${item.id}/rules`):()=>navigate("/login")}
                 >Play now</h4>
               </footer>
             </div>
