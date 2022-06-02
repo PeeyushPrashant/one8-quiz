@@ -24,3 +24,9 @@
 .start-btn {
   background-color: var(--primary-light);
 }
+
+@media screen and (max-width: 650px) {
+  .rules {
+    align-items: flex-start;
+  }
+}

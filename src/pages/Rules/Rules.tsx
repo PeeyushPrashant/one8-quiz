@@ -1,7 +1,11 @@
 import { NavBar } from "../../components"
+import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "./Rules.css"
 
 export const Rules=()=>{
+    const {categoryId}=useParams();
+    const navigate=useNavigate();
     return(
         <>
         <NavBar/>
@@ -30,7 +34,9 @@ export const Rules=()=>{
             <p>You will get 30 seconds to select an option for each question.</p>
             </section>
             </div>
-            <button className="btn start-btn">Start Quiz</button>
+            <button className="btn start-btn"
+            onClick={()=>navigate(`/${categoryId}/1`)}
+            >Start Quiz</button>
            </div>
         </main>
         </>
