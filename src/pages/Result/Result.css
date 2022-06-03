@@ -1,0 +1,53 @@
+.result-container {
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+  color: var(--text-color);
+}
+.result-heading {
+  color: var(--primary-light);
+}
+.head-margin {
+  margin: 0;
+}
+.border-line {
+  width: 100%;
+  background-color: var(--nav-border-clr);
+}
+.questions-list {
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+}
+.quiz-option {
+  width: 100%;
+  padding: 1rem 0 1rem 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+}
+.correct-icon {
+  color: var(--bg-success);
+}
+.wrong-icon {
+  color: var(--red);
+}
+.not-selected-info {
+  color: var(--primary-light);
+  font-size: 1.7rem;
+}
+.bg-success {
+  background-color: var(--bg-success);
+}
+.bg-error {
+  background-color: var(--red);
+}
+.bg-color {
+  background-color: var(--card-bg-color);
+}
+.home-btn {
+  background-color: var(--primary-light);
+  font-size: 1.7rem;
+}
