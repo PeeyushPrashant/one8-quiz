@@ -3,10 +3,12 @@ import {Routes,Route } from 'react-router-dom';
 import { LandingPage,Rules,Login,SignUp,Question,Result } from './pages';
 
 import './App.css';
+import { useTheme } from './context';
 
 function App() {
+  const {theme} = useTheme()
   return (
-    <div className="App">
+    <div className="App" data-theme={theme}>
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/:categoryId">
