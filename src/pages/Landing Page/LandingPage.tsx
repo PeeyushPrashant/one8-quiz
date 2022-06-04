@@ -10,7 +10,8 @@ export const LandingPage=()=>{
     return(
         <>
         <NavBar/>
-        <main className="quiz-home-container">
+        <main className="main-cont flex-col">
+        <div className="quiz-home-container">
         <section className="left-section">
           <h1 className="left-subhead">Wanna test your knowledge about cricket?</h1>
           <h1 className="left-subhead">Let's have some fun!</h1>
@@ -19,7 +20,7 @@ export const LandingPage=()=>{
         <section className="right-section">
           <img src="https://res.cloudinary.com/doohtm4bs/image/upload/v1652510759/Quiz%20App/quiz-home_eh5wmt.png" className="landing-img" alt="" />
         </section>
-        </main>
+        </div>
         <hr className="partition-line" />
         <section className="quiz-card-container" id="explore">
           {categoryData.map((item)=>{
@@ -41,6 +42,7 @@ export const LandingPage=()=>{
             )
           })}
         </section>
+        </main>
         </>
     )
 }

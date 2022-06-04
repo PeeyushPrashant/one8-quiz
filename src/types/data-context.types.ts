@@ -16,5 +16,5 @@ export type ChildPropType={
 }
 export type QuestionStateType={
     questionIndex:Number,
-    selectedOption:Number
+    selectedOption:number
 }

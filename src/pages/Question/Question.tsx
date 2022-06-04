@@ -56,13 +56,16 @@ export const Question=()=>{
         dispatch:Dispatch, questions:QuizType[] | undefined
         )=>{
             dispatch({type:"ADD_QUESTION_DATA",
-        payload:{questionIndex,selectedOption:activeButton}})
+        payload:{questionIndex:questionIndex,selectedOption:activeButton}})
 
         sessionStorage.setItem("answerdata", 
         JSON.stringify([...JSON.parse(sessionStorage.getItem("answerdata") || '[]'),
         {questionIndex:questionIndex,selectedOption:activeButton}    
     ]))
-        navigate(`/${categoryId}/${Number(questionIndex)+1}`)
+       if(Number(questionIndex)===questions?.length)
+          navigate(`/${categoryId}/result`,{replace:true})
+       else
+          navigate(`/${categoryId}/${Number(questionIndex)+1}`,{replace:true})
         setActiveButton(-1);
         setTimer(40);
     }

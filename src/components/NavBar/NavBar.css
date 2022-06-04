@@ -3,12 +3,15 @@
   align-items: center;
   justify-content: space-between;
   height: 7rem;
+  width: 80vw;
+  margin: auto;
   position: sticky;
   top: 0;
   background-color: var(--bg-color);
   border-bottom: 0.2rem solid var(--nav-border-clr);
 }
 .nav-heading {
+  cursor: pointer;
   align-items: center;
 }
 .nav-logo {

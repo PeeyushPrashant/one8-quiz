@@ -5,6 +5,7 @@
   --text-color: rgb(240, 232, 232);
   --primary-light: #0b77e4;
   --bg-color: rgb(10, 25, 41);
+  --bg-success: #22c55e;
   --card-bg-color: #223251;
   --nav-border-clr: #eee;
   --card-shadow: #adb5bd;
@@ -13,16 +14,24 @@
   --grey-medium: #dcdee0;
 }
 
-body {
-  background-color: var(--bg-color);
+[data-theme="light"] {
+  --text-color: rgb(34, 33, 33);
+  --bg-color: #ededed;
+  --card-bg-color: #e0e0e0;
+  --nav-border-clr: rgb(48, 48, 48);
+  --card-shadow: #2b2b2b;
 }
+
 .App {
-  max-width: 80vw;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 0 0 2rem;
+  background-color: var(--bg-color);
 }
 .main-cont {
   padding: 5rem 0;
   justify-content: center;
   align-items: center;
+  width: 80vw;
+  margin: auto;
 }
