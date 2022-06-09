@@ -46,7 +46,7 @@ export const Login=()=>{
                 required
               />
             </div>
-            <button className="btn-secondary auth-btn" 
+            <button className="btn-secondary auth-btn login-btn" 
             onClick={()=>loginHandler(login.email,login.password)}
             >Login</button>
             <button className="btn-icon auth-btn"
