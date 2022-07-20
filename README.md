@@ -25,11 +25,12 @@ $ npm start
 5. Timer for Questions
 6. Dark Mode / Light Mode
 7. Quit Quiz
-8. Authentication
+8. User Profile Page
+9. Authentication
       - User Signup
       - User Login
       - User Logout
-9. Full Responsive
+10. Full Responsive
 
   
 
