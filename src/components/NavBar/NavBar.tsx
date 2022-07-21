@@ -3,9 +3,9 @@ import { useAuth,useTheme } from "../../context"
 import "./NavBar.css"
 
 export const NavBar=()=>{
-  const {token,logoutHandler}=useAuth();
+  const {token}=useAuth();
   const {theme,changeTheme} = useTheme();
-  const navigate= useNavigate()
+  const navigate= useNavigate();
     return(
         <nav className="navbar flex-row">
         <div className="nav-heading flex-row"
@@ -25,11 +25,11 @@ export const NavBar=()=>{
           <i className="bi bi-moon-fill nav-icon"></i>}
           </div>
           {token?<div className="saved-item flex-row"
-          onClick={logoutHandler}
-          ><i className="fas fa-sign-out-alt nav-icon"></i></div>:
+          onClick={()=>navigate("/profile")}
+          ><i className="fas fa-user-circle nav-icon"></i></div>:
           <div className="saved-item flex-row"
           onClick={()=>navigate("/login")}
-          ><i className="fas fa-user-circle nav-icon"></i></div>}
+          ><i className="fas fa-sign-in-alt nav-icon"></i></div>}
         </div>
       </nav>
     )

@@ -1,14 +1,17 @@
 import React from 'react';
 import {Routes,Route } from 'react-router-dom';
-import { LandingPage,Rules,Login,SignUp,Question,Result } from './pages';
+import { LandingPage,Rules,Login,SignUp,Question,Result,Profile } from './pages';
+import { Loader } from './components';
 
 import './App.css';
-import { useTheme } from './context';
+import { useData, useTheme } from './context';
 
 function App() {
-  const {theme} = useTheme()
+  const {theme} = useTheme();
+  const {loader}= useData();
   return (
     <div className="App" data-theme={theme}>
+      {loader && <Loader/>}
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/:categoryId">
@@ -18,6 +21,7 @@ function App() {
         </Route>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/profile" element={<Profile/>}/>
       </Routes>
     </div>
   );

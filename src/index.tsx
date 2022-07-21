@@ -11,11 +11,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <ThemeProvider>
-    <AuthProvider>
     <DataProvider>
+    <AuthProvider>
     <App />
-    </DataProvider>
     </AuthProvider>
+    </DataProvider>
     </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>

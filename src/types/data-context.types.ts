@@ -9,6 +9,8 @@ export type DataStateType={
 export type DataContextType={
     state:DataStateType;
     dispatch:Dispatch;
+    loader:boolean;
+    setLoader: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export type ChildPropType={
