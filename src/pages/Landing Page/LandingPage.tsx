@@ -25,7 +25,7 @@ export const LandingPage=()=>{
         <section className="quiz-card-container" id="explore">
           {categoryData.map((item)=>{
             return(
-              <div className="quiz-card flex-col">
+              <div className="quiz-card flex-col" key={item.id}>
                <img src={item.image} 
                className="card-image"
                />

@@ -1,12 +1,13 @@
 import { NavBar } from "../../components"
 import { useNavigate } from "react-router-dom"
 import "./Auth.css"
-import { useState } from "react";
-import { useAuth } from "../../context";
+import { useEffect, useState } from "react";
+import { useAuth, useData } from "../../context";
 
 export const Login=()=>{
     const navigate= useNavigate();
-    const {loginHandler}= useAuth();
+    const {token,loginHandler}= useAuth();
+    const {setLoader} = useData();
     const [login,setLogin]= useState({
       email:'',
       password:''
@@ -14,6 +15,20 @@ export const Login=()=>{
     const testLogin=()=>{
       setLogin({...login,email:"prashant123@gmail.com",password:"prashant@123"})
     }
+    // if(token){
+    //   console.log(1);
+    //     setLoader(true);
+    //     setTimeout(()=>setLoader(false),1000);
+    // }
+    // useEffect(()=>{
+    //   console.log(token);
+    //   if(token){
+    //     console.log(1);
+    //          setLoader(true);
+    //          setTimeout(()=>setLoader(false),1000);
+    //      }
+    // },[token])
+    // console.log(token);
     return (
         <>
         <NavBar/>

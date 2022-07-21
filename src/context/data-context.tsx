@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useState } from "react";
 import { ChildPropType,DataStateType,DataContextType } from "../types";
 import { quizReducer } from "../reducer/DataReducer";
 
@@ -10,8 +10,9 @@ const initialState:DataStateType={
 
 const DataProvider=({children}:ChildPropType)=>{
     const [state,dispatch]=useReducer(quizReducer,initialState);
+    const [loader,setLoader]= useState<boolean>(false);
   return(
-      <DataContext.Provider value={{state,dispatch}}>
+      <DataContext.Provider value={{state,dispatch,loader,setLoader}}>
           {children}
       </DataContext.Provider>
   )
