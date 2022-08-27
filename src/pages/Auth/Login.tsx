@@ -15,24 +15,11 @@ export const Login=()=>{
     const testLogin=()=>{
       setLogin({...login,email:"prashant123@gmail.com",password:"prashant@123"})
     }
-    // if(token){
-    //   console.log(1);
-    //     setLoader(true);
-    //     setTimeout(()=>setLoader(false),1000);
-    // }
-    // useEffect(()=>{
-    //   console.log(token);
-    //   if(token){
-    //     console.log(1);
-    //          setLoader(true);
-    //          setTimeout(()=>setLoader(false),1000);
-    //      }
-    // },[token])
-    // console.log(token);
+    
     return (
         <>
         <NavBar/>
-        <main className="main-cont flex-col">
+        {/* <main className="main-cont flex-col"> */}
         <div className="auth-container flex-row">
           <div className="auth-card flex-col">
             <h1 className="auth-heading">Login</h1>
@@ -75,7 +62,7 @@ export const Login=()=>{
             </div>
           </div>
         </div>
-        </main>
+        {/* </main> */}
         
         </>
     )

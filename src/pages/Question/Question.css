@@ -66,3 +66,22 @@
   background-color: var(--primary-light);
   font-size: 1.7rem;
 }
+
+@media screen and (max-width: 1150px) {
+  .quiz-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quiz-container {
+    width: 100%;
+    padding: 0;
+  }
+  .quiz-question {
+    font-size: 2rem;
+  }
+  .timer {
+    font-size: 1.6rem;
+  }
+}

@@ -1,7 +1,6 @@
 .auth-container {
   justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
+  padding-top: 5rem;
 }
 .auth-card {
   background-color: var(--bg-color);
@@ -16,6 +15,10 @@
 }
 .auth-heading {
   margin: 0;
+}
+.form-description {
+  padding: 0 0.5rem;
+  text-align: center;
 }
 .auth-subhead {
   font-size: 1.5rem;
@@ -62,4 +65,13 @@
   padding: 2rem 0;
   font-size: 1.6rem;
   align-items: center;
+}
+
+@media screen and (max-width: 520px) {
+  .auth-card {
+    width: 90%;
+  }
+  .auth-input {
+    width: 95%;
+  }
 }
