@@ -30,7 +30,7 @@ $ npm start
       - User Signup
       - User Login
       - User Logout
-10. Full Responsive
+10. Fully Responsive✅
 
   
 
